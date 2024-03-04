@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 ///Allows to connect with Azure App configuration
-var connectionString = "Endpoint=https://appconfigforapp.azconfig.io;Id=+dwR;Secret=duLts2WatRk7Eqb6L50u3D/d1BiBHxqqLrVL0CF1H20=";
+var connectionString = "Endpoint=https://app-config-con.azconfig.io;Id=gmiL;Secret=EyXcWHsNgfo0Y9q03VVPJFQYukJSypowYGJrIPvgPxY=";
 
 
 builder.Host.ConfigureAppConfiguration(builder =>
