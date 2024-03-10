@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLApplication", "SQLApplic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAzureCompany", "MyAzureCompany\MyAzureCompany.csproj", "{848F0AD7-A23B-4612-AB43-3AE54E545095}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sqlfunctionapp", "sqlfunctionapp\sqlfunctionapp.csproj", "{E7409256-1EF6-46F2-9AC8-60BCD5583EF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sqlfunctionapp", "sqlfunctionapp\sqlfunctionapp.csproj", "{E7409256-1EF6-46F2-9AC8-60BCD5583EF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
