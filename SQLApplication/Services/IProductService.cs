@@ -4,7 +4,8 @@ namespace SQLApplication.Services
 {
     public interface IProductService
     {
-        List<Product> GetProducts();
+        Task<List<Product>> GetProducts();
+        //List<Product> GetProducts();
         Task<bool> IsBeta();
     }
 }
