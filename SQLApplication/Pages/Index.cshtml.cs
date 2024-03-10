@@ -26,6 +26,7 @@ namespace SQLApplication.Pages
             IsBeta = _productservice.IsBeta().Result; //result added as it is an async method
             //Products = _productservice.GetProducts();
             Products = _productservice.GetProducts().GetAwaiter().GetResult();
+
         }
     }
 }
