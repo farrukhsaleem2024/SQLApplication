@@ -23,7 +23,6 @@ namespace SQLApplication.Services
             if (await _featureManager.IsEnabledAsync("beta"))
             {
                 return true;
-
             }
             else
             {
