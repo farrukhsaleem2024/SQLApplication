@@ -38,8 +38,8 @@ namespace sqlfunctionapp
                     _products.Add(product);
                 }
             }
-            return new OkObjectResult(_products);
-
+            //return new OkObjectResult(_products);
+            return new OkObjectResult(JsonConvert.SerializeObject(_products));
         }
         [FunctionName("GetProduct")]
         public static async Task<IActionResult> RunProduct(
