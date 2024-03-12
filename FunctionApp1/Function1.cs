@@ -45,5 +45,39 @@ namespace FunctionApp1
             //return new OkObjectResult(_products);
             return new OkObjectResult(JsonConvert.SerializeObject(_products));
         }
+        [Function("GetProduct")]
+        public static async Task<IActionResult> RunProduct(
+            [HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req,
+            ILogger log)
+        {
+            int productId = int.Parse(req.Query["id"]);
+            SqlConnection conn = GetConnection();
+            List<Product> _products = new List<Product>();
+            string statement = String.Format("SELECT ProductID,ProductName,Quantity from Products WHERE ProductID={0}", productId);
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand(statement, conn);
+
+            Product product = new Product();
+
+            try
+            {
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    reader.Read();
+                    product.ProductID = reader.GetInt32(0);
+                    product.ProductName = reader.GetString(1);
+                    product.Quantity = reader.GetInt32(2);
+                    var response = product;
+                    return new OkObjectResult(response);
+                }
+            }
+            catch (Exception ex)
+            {
+                var response = "No Response found";
+                conn.Close();
+                return new OkObjectResult(response);
+            }
+        }
     }
 }
