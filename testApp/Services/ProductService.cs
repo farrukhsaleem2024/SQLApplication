@@ -42,8 +42,8 @@ namespace testApp.Services
             // return new SqlConnection(_configuration.GetConnectionString("ConnectionString"));
             return new SqlConnection(_configuration["ConnectionString"]);
         }
-        //public async List<Product> GetProducts()
-        public async Task<List<Product>> GetProducts()
+        public List<Product> GetProducts()
+        //public async Task<List<Product>> GetProducts()
         {
             //    string FunctionURL = "https://myappfn.azurewebsites.net/api/GetProducts?code=eLquOHTPcvE---JcQltMFwbs9ux7vQbx80lPb6I-AjLuAzFu9dq1vg==";
 
