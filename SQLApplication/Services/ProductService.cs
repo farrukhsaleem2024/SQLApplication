@@ -52,6 +52,7 @@ namespace SQLApplication.Services
                 HttpResponseMessage response = await client.GetAsync(FunctionURL);
                 string content = await response.Content.ReadAsStringAsync();
                 return JsonSerializer.Deserialize<List<Product>>(content);
+
             }
             
             //SqlConnection conn = GetConnection();
