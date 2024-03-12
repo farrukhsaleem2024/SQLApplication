@@ -53,7 +53,6 @@ namespace testApp.Services
             //        string content = await response.Content.ReadAsStringAsync();
             //        return JsonSerializer.Deserialize<List<Product>>(content);
             //    }
-
             SqlConnection conn = GetConnection();
             List<Product> _products = new List<Product>();
             string statement = "SELECT ProductID,ProductName,Quantity from Products";
