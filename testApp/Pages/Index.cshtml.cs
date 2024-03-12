@@ -17,7 +17,7 @@ namespace testApp.Pages
 
         public void OnGet()
         {
-            //Products = _productservice.GetProducts().GetAwaiter().GetResult();
+            Products = _productservice.GetProducts();
         }
     }
 }
