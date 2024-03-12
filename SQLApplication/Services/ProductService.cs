@@ -45,7 +45,7 @@ namespace SQLApplication.Services
         //public async List<Product> GetProducts()
         public async Task<List<Product>> GetProducts()
         {
-            string FunctionURL = "https://myappfn.azurewebsites.net/api/GetProducts?code=eLquOHTPcvE---JcQltMFwbs9ux7vQbx80lPb6I-AjLuAzFu9dq1vg==";
+            string FunctionURL = "https://myappfn.azurewebsites.net/api/GetNewProducts?code=B4YntB36l5ekZs-o_jFZKvf77R_JoTd8eNcquoRuI3wUAzFuwBL6Nw==";
 
             using (HttpClient client = new HttpClient())
             {
