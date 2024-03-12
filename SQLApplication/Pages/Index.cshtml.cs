@@ -14,7 +14,6 @@ namespace SQLApplication.Pages
         public IndexModel(IProductService productService) 
         {
             _productservice = productService;
-
         }
 
         
