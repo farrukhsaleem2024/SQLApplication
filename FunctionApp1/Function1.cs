@@ -9,27 +9,16 @@ namespace FunctionApp1
 {
     public class Function1
     {
-        private readonly ILogger<Function1> _logger;
-
-        public Function1(ILogger<Function1> logger)
-        {
-            _logger = logger;
-        }
+        
         private static SqlConnection GetConnection()
         {
             string connectionString = Environment.GetEnvironmentVariable("SQLAZURECONNSTR_SQLConnectionString");
             //string connectionString = "Server=tcp:webappdbsrvr.database.windows.net,1433;Initial Catalog=webappdb;Persist Security Info=False;User ID=webappdbsrvr;Password=WebAppDbServer2024;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             return new SqlConnection(connectionString);
 
-        }
-        [Function("Function1")]
-        public IActionResult Run([HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequest req)
-        {
-            _logger.LogInformation("C# HTTP trigger function processed a request.");
-            return new OkObjectResult("Welcome to Azure Functions!");
-        }
+        }       
 
-        [Function("GetProducts")]
+        [Function("GetNewProducts")]
         public static async Task<IActionResult> RunProducts(
            [HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req,
            ILogger log)
