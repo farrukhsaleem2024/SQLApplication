@@ -43,16 +43,16 @@ namespace testApp.Services
             return new SqlConnection(_configuration["ConnectionString"]);
         }
         //public async List<Product> GetProducts()
-        public async Task<List<Product>> GetProducts()
-        {
-            string FunctionURL = "https://myappfn.azurewebsites.net/api/GetProducts?code=eLquOHTPcvE---JcQltMFwbs9ux7vQbx80lPb6I-AjLuAzFu9dq1vg==";
+        //public async Task<List<Product>> GetProducts()
+        //{
+        //    string FunctionURL = "https://myappfn.azurewebsites.net/api/GetProducts?code=eLquOHTPcvE---JcQltMFwbs9ux7vQbx80lPb6I-AjLuAzFu9dq1vg==";
 
-            using (HttpClient client = new HttpClient())
-            {
-                HttpResponseMessage response = await client.GetAsync(FunctionURL);
-                string content = await response.Content.ReadAsStringAsync();
-                return JsonSerializer.Deserialize<List<Product>>(content);
-            }
+        //    using (HttpClient client = new HttpClient())
+        //    {
+        //        HttpResponseMessage response = await client.GetAsync(FunctionURL);
+        //        string content = await response.Content.ReadAsStringAsync();
+        //        return JsonSerializer.Deserialize<List<Product>>(content);
+        //    }
 
             //SqlConnection conn = GetConnection();
             //List<Product> _products = new List<Product>();
@@ -74,6 +74,6 @@ namespace testApp.Services
             //    }
             //}
             //return _products;
-        }
+       // }
     }
 }
