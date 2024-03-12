@@ -54,6 +54,7 @@ namespace testApp.Services
             //        return JsonSerializer.Deserialize<List<Product>>(content);
             //    }
             SqlConnection conn = GetConnection();
+
             List<Product> _products = new List<Product>();
             string statement = "SELECT ProductID,ProductName,Quantity from Products";
             conn.Open();
