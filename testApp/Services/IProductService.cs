@@ -6,6 +6,6 @@ namespace testApp.Services
     {
         //Task<List<Product>> GetProducts();
         List<Product> GetProducts();
-       // Task<bool> IsBeta();
+        Task<bool> IsBeta();
     }
 }

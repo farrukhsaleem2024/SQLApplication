@@ -2,7 +2,6 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using Microsoft.FeatureManagement;
-//using SQLApplication.Services;
 using testApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);

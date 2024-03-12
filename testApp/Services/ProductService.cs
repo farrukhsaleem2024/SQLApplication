@@ -1,4 +1,5 @@
 ﻿using System.Data.SqlClient;
+using Microsoft.FeatureManagement;
 using System.Text.Json;
 using testApp.Models;
 
@@ -8,28 +9,28 @@ namespace testApp.Services
     public class ProductService : IProductService
     {
         private readonly IConfiguration _configuration;
-        //private readonly IFeatureManager _featureManager;
+        private readonly IFeatureManager _featureManager;
         //private static string db_source = "trainingazuredb.database.windows.net";
         //private static string db_user = "trainingazuredb";
         //private static string db_password = "Tr@iningAzuredb";
         //private static string db_database = "TrainingAzureDB";
-        public ProductService(IConfiguration configuration)//, IFeatureManager featureManager)
+        public ProductService(IConfiguration configuration, IFeatureManager featureManager)
         {
             _configuration = configuration;
-            // _featureManager = featureManager;
+             _featureManager = featureManager;
         }
 
-        //public async Task<bool> IsBeta()
-        //{
-        //    if (await _featureManager.IsEnabledAsync("beta"))
-        //    {
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
+        public async Task<bool> IsBeta()
+        {
+            if (await _featureManager.IsEnabledAsync("beta"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         private SqlConnection GetConnection()
         {
