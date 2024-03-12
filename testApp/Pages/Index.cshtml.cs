@@ -9,6 +9,7 @@ namespace testApp.Pages
     {
         public List<Product> Products;
         private readonly IProductService _productservice;
+        public bool IsBeta;
 
         public IndexModel(IProductService productService)
         {
