@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "testApp", "testApp\testApp.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionApp1", "FunctionApp1\FunctionApp1.csproj", "{F5233782-B9A7-46E8-807A-A3C3033E58A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainerApp", "ContainerApp\ContainerApp.csproj", "{C9E09F65-FFE6-40E6-938B-941AFA1DB00A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContainerApp", "ContainerApp\ContainerApp.csproj", "{C9E09F65-FFE6-40E6-938B-941AFA1DB00A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySQLApp", "MySQLApp\MySQLApp.csproj", "{53F394C8-B1B8-4566-944C-4E0E79446845}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{C9E09F65-FFE6-40E6-938B-941AFA1DB00A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9E09F65-FFE6-40E6-938B-941AFA1DB00A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9E09F65-FFE6-40E6-938B-941AFA1DB00A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53F394C8-B1B8-4566-944C-4E0E79446845}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53F394C8-B1B8-4566-944C-4E0E79446845}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53F394C8-B1B8-4566-944C-4E0E79446845}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53F394C8-B1B8-4566-944C-4E0E79446845}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
